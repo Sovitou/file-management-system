@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(json());
 app.use("/api/v1/auth", authRoutes);
-app.use("api/v1/file", fileRoutes);
+app.use("/api/v1/file", fileRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello there 👋");
