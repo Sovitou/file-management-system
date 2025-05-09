@@ -1,20 +1,21 @@
 .env
-node_modules
+node_modules/
+# Prisma
+/prisma/dev.db
+/prisma/dev.db-journal
+/prisma/migrations/*
+!.prisma/migrations/*.sql  # Optional: keep SQL files, ignore other artifacts
 
-.DS_Store
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.idea/
+# Prisma generated client
+/node_modules/
+/prisma/node_modules/
+/prisma/generated/
+
+# Environment variables
+.env
+.env.*
+# Prisma generated client
+
+generated/prisma 
+
 .vscode/
-dist/
-coverage/
-
-generated/
-
-prisma/migrations/
-prisma/dev.db
-prisma/dev.db-journal
-
