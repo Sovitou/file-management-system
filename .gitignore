@@ -12,8 +12,9 @@ yarn-error.log*
 dist/
 coverage/
 
+generated/prisma
+
 prisma/migrations/
 prisma/dev.db
 prisma/dev.db-journal
 
-generated/prisma
