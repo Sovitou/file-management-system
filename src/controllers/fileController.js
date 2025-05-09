@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 const upload = multer({
   dest: "uploads/",
   limits: { fileSize: 10 * 1024 * 1024 },
-}); // 10MB limit
+}); 
 
 export const uploadFile = [
   upload.single("file"),

@@ -28,7 +28,7 @@ export const login = async (req, res) => {
       { userId: user.id },
       process.env.SECRET_KEY,
       {
-        expiresIn: "1h",
+        expiresIn: "1d",
       }
     );
     res.json({ token });
