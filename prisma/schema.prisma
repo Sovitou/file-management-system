@@ -20,6 +20,7 @@ model File {
   name String 
   size Int 
   type String
+  path String
   uploadedAt DateTime @default(now())
   userId Int 
   user User @relation(fields: [userId], references: [id])

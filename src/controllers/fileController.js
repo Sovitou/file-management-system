@@ -5,10 +5,22 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  filename: (req, file, cb) => {
+    const type = path.extname(file.originalname);
+    const name = path.basename(file.originalname, type);
+
+    cb(null, `${name}${type}`);
+  },
+});
+
 const upload = multer({
-  dest: "uploads/",
+  storage: storage,
   limits: { fileSize: 10 * 1024 * 1024 },
-}); 
+});
 
 export const uploadFile = [
   upload.single("file"),
