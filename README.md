@@ -2,17 +2,19 @@
 
 ## Overview
 
-This File Management System is a backend application built with Express.js and Prisma ORM, designed to handle file operations such as uploading, listing, downloading, and deleting files. It includes user authentication for secure access and uses a modular structure for scalability and maintainability.
+This File Management System is a backend application built with Express.js, Multer, and Prisma ORM. It handles file operations such as uploading, listing, downloading, and deleting files. The system includes user authentication for secure access and follows a modular architecture to ensure scalability and maintainability.
 
 ## Features
 
 -   **User Authentication**: Secure registration and login system with JWT-based authentication.
     
--   **File Operations**: Upload, list, download, and delete files via RESTful API endpoints.
+-   **File Operations**: Upload, list, download, and delete files via RESTful API endpoints , powered by Multer.
     
--   **Database Management**: Uses Prisma ORM for database interactions, with SQLite as the default database (configurable for other databases like PostgreSQL).
+-   **Database Management**: Uses Prisma ORM for database interactions, with as the default database (configurable for other databases like MySQL, or SQLite).
+
     
 -   **Modular Design**: Organized into controllers, routes, and middleware for clean code separation.
+
     
 
 ## Tech Stack
@@ -21,7 +23,8 @@ This File Management System is a backend application built with Express.js and P
     
 -   **ORM**: Prisma
     
--   **Database**: Post
+-   **Database**: PostgreSQL
+-   **File Operation** :  Multer
     
 -   **Authentication**: JSON Web Tokens (JWT)
     
@@ -80,7 +83,7 @@ file-management-system/
         npx prisma migrate dev --name init
         ```
         
-    -   Ensure schema.prisma is configured with your database (default: SQLite).
+    -   Ensure schema.prisma is configured with your database (default: PostgreSQL).
         
 4.  **Environment Setup**
     
@@ -97,7 +100,7 @@ file-management-system/
 5.  **Start the Server**
     
     ```bash
-    npm start
+    npm run dev
     ```
     
     -   The server will run on http://localhost:3000 (or the port specified in .env).
