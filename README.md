@@ -34,19 +34,20 @@ This File Management System is a backend application built with Express.js, Mult
 ```
 file-management-system/
 ├── prisma/
-│   └── schema.prisma        # Prisma schema for database models
+│   └── schema.prisma           # Prisma schema for database models
 ├── src/
 │   ├── controllers/
 │   │   ├── authController.js   # Authentication logic (register, login)
 │   │   └── fileController.js   # File operations (upload, list, search, download, delete, view)
 │   ├── middleware/
-│   │   └── authMiddleware.js             # JWT authentication middleware
+│   │   └── authMiddleware.js   # JWT authentication middleware
 │   ├── routes/
 │   │   ├── authRoutes.js       # Authentication routes
 │   │   └── fileRoutes.js       # File-related routes
 │   └── server.js               # Main server entry point
+│   └── swagger.js              # API Docs
 ├── uploads/                    # Folder for storing uploaded files (created manually)
-└── package.json               # Project dependencies and scripts
+└── package.json                # Project dependencies and scripts
    ```
 
 ## Installation
